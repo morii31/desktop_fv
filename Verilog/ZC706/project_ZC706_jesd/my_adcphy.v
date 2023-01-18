@@ -54,21 +54,21 @@ module my_adcphy(
     output wire SYNCP_o,
     output wire SYNCM_o
     );
-assign refclk_p_i = refclk_p_o;
-assign refclk_n_i = refclk_n_o;
-assign subclk_p_i = subclk_p_o;
-assign subclk_n_i = subclk_n_o;
-assign DAP_i = DAP_o;
-assign DAM_i = DAM_o;
-assign DBP_i = DBP_o;
-assign DBM_i = DBM_o;
-assign DCP_i = DCP_o;
-assign DCM_i = DCM_o;
-assign DDP_i = DDP_o;
-assign DDM_i = DDM_o;
-assign SYSREFP_i = SYSREFP_o;
-assign SYSREFM_i = SYSREFM_o;
-assign SYNCP_i = SYNCP_o;
-assign SYNCM_i = SYNCM_o;
+assign refclk_p_o = refclk_p_i;
+assign refclk_n_o = refclk_n_i;
+assign subclk_p_o = subclk_p_i;
+assign subclk_n_o = subclk_n_i;
+assign DAP_o = DAP_i;
+assign DAM_o = DAM_i;
+assign DBP_o = DBP_i;
+assign DBM_o = DBM_i;
+assign DCP_o = DCP_i;
+assign DCM_o = DCM_i;
+assign DDP_o = DDP_i;
+assign DDM_o = DDM_i;
+assign SYSREFP_o = SYSREFP_i;
+assign SYSREFM_o = SYSREFM_i;
+assign SYNCP_o = SYNCP_i;
+assign SYNCM_o = SYNCM_i;
 
 endmodule
