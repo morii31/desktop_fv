@@ -48,14 +48,17 @@ module my_adcphy(
     output wire SYNCP_o,
     output wire SYNCM_o
     );
-    
+
 assign refclk_p_o = refclk_p_i;
 assign refclk_n_o = refclk_n_i;
-assign subclk_p_o = subclk_p_i;
-assign subclk_n_o = subclk_n_i;
 assign DP_o = {DAP_i, DBP_i, DCP_i, DDP_i};
 assign DM_o = {DAM_i, DBM_i, DCM_i, DDM_i};
 
+IBUFDS ibufds_subclk(
+    .O (subclk_o),
+    .I (subclk_p_i),
+    .IB(subclk_n_i)
+);
 IBUFDS ibufds_sysref(
     .O (SYSREF_o),
     .I (SYSREFP_i),
